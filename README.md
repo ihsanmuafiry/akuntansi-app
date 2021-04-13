@@ -15,4 +15,4 @@
 4. menambahkan transaksi per cabang dan pengolahan akun transaksi
 <img src="images/akuntabel-4.png" width="500">
 
-#program is still need to improve because accounting has many conditional for every account name
+#program still needs to improve because accounting has many conditional for every account name
