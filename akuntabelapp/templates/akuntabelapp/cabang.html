@@ -1,0 +1,101 @@
+{% extends 'akuntabelapp/main.html'%}
+{%block content%}
+
+ <br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Cabang: {{cabang.namaCabang}}</h5>
+			<hr>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="">Update Cabang</a>
+
+
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Informasi Cabang</h5>
+			<hr>
+			<p>Email: </p>
+			<p>Telepon: </p>
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Total Transaksi</h5>
+			<hr>
+
+			<a class="btn btn-outline-info  btn-sm btn-block" href="{% url 'addTrans' cabang.id %}">Tambah Transaksi</a>
+
+			<h1 style="text-align: center;padding: 10px">  </h1>
+
+		</div>
+	</div>
+</div>
+
+
+<br>
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<form method="get">
+
+
+		    <button class="btn btn-primary" type="submit">Search</button>
+		  </form>
+		</div>
+	</div>
+
+
+
+</div>
+<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Nomor Dokumen</th>
+					<th>Deskripsi</th>
+					<th>Tanggal</th>
+					<th>Nama Akun</th>
+                    <th>Tipe</th>
+					<th>Debit P</th>
+					<th>Credit P</th>
+					<th>Ubah</th>
+					<th>Hapus</th>
+				</tr>
+
+				{%for i in trans%}
+
+
+				<tr>
+					<td>{{i.nomorDokumen}}</td>
+					<td>{{i.desc}}</td>
+					<td>{{i.tanggal}}</td>
+					<td>{{i.akun}}</td>
+					<td>{{i.tipeAkun}}</td>
+					<td>{{i.saldoCredit1}}</td>
+					<td>{{i.saldoDebit1}}</td>
+					<td><a class="btn btn-sm btn-info" href="{%url 'updateTrans' i.id%}">Ubah</a></td>
+					<td><a class="btn btn-sm btn-danger" href="{%url 'deleteTrans' i.id%}">Hapus</a></td>
+
+
+				</tr>
+
+				{%endfor%}
+
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+{%endblock%}

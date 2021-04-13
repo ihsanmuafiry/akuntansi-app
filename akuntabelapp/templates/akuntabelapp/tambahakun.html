@@ -1,0 +1,31 @@
+{% extends 'akuntabelapp/main.html'%}
+(% load static%)
+{%block content%}
+
+<h1> Tambah Akun</h1>
+
+  <form id="form-add1" method="POST">
+
+      {%csrf_token%}
+        <div class="namaAkun">
+          <label > Nama Akun : </label>
+          <input type="text" name="namaAkun"> <br>
+        </div>
+       <br>
+
+      <div class="coa">
+          <label > COA ID :</label>
+          <input type="text" name="coaAkun" pattern="[0-9]+" title="Pastikan kolom ini adalah nomor" required="required">
+       </div>
+        <br>
+
+         <input type="submit" name="submit" >
+
+
+  </form>
+
+
+
+
+
+{%endblock%}

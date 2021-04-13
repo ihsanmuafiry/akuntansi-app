@@ -1,0 +1,14 @@
+{% extends 'akuntabelapp/main.html'%}
+(% load static%)
+{%block content%}
+
+    <form id="form-delete1" method="POST">
+        {%csrf_token%}
+          <h1>Apakah anda ingin menghapus akun <a>{{akun.namaAkun}}</a> ?</h1>
+
+          <button type="submit">Hapus</button>
+    </form>
+
+
+
+{%endblock%}

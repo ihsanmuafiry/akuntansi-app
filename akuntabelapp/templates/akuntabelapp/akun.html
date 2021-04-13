@@ -1,0 +1,170 @@
+{% extends 'akuntabelapp/main.html'%}
+{%block content%}
+
+
+
+<br>
+
+<div class="row">
+	<div class="col-md-5">
+		<h5 class="title">DAFTAR AKUN</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="{% url 'addAccount' %}">Tambah Akun</a>
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Kode Akun</th>
+					<th>Nama Akun</th>
+				</tr>
+
+                        {% for i in akuns %}
+							{% if  i.coaAwal == '1' %}
+                 			<div class="akun-1">
+								<tr>
+									<td>	</td>
+									<td>{{i.coaAwal}}-{{i.coaAkun}}</td>
+									<td>{{i.namaAkun}}</td>
+									<td><a class="btn btn-sm btn-info" href="{%url 'updateAccount' i.id%}">Ubah</a></td>
+									<td><a class="btn btn-sm btn-danger" href="{%url 'deleteAccount' i.id%}">Hapus</a></td>
+								</tr>
+							</div>
+            			{% endif %}
+
+                        {% endfor %}
+<!--				       ======================================-->
+				{% for i in akuns %}
+							{% if  i.coaAwal == '2' %}
+                 			<div class="akun-2">
+								<tr>
+									<td>	</td>
+									<td>{{i.coaAwal}}-{{i.coaAkun}}</td>
+									<td>{{i.namaAkun}}</td>
+									<td><a class="btn btn-sm btn-info" href="{%url 'updateAccount' i.id%}">Ubah</a></td>
+									<td><a class="btn btn-sm btn-danger" href="{%url 'deleteAccount' i.id%}">Hapus</a></td>
+								</tr>
+							</div>
+            			{% endif %}
+
+                        {% endfor %}
+<!--				       ======================================-->
+				{% for i in akuns %}
+							{% if  i.coaAwal == '3' %}
+                 			<div class="akun-3">
+								<tr>
+									<td>	</td>
+									<td>{{i.coaAwal}}-{{i.coaAkun}}</td>
+									<td>{{i.namaAkun}}</td>
+									<td><a class="btn btn-sm btn-info" href="{%url 'updateAccount' i.id%}">Ubah</a></td>
+									<td><a class="btn btn-sm btn-danger" href="{%url 'deleteAccount' i.id%}">Hapus</a></td>
+								</tr>
+							</div>
+            			{% endif %}
+
+                        {% endfor %}
+<!--				       ======================================-->
+				{% for i in akuns %}
+							{% if  i.coaAwal == '4' %}
+                 			<div class="akun-4">
+								<tr>
+									<td>	</td>
+									<td>{{i.coaAwal}}-{{i.coaAkun}}</td>
+									<td>{{i.namaAkun}}</td>
+									<td><a class="btn btn-sm btn-info" href="{%url 'updateAccount' i.id%}">Ubah</a></td>
+									<td><a class="btn btn-sm btn-danger" href="{%url 'deleteAccount' i.id%}">Hapus</a></td>
+								</tr>
+							</div>
+            			{% endif %}
+
+                        {% endfor %}
+<!--				       ======================================-->
+				{% for i in akuns %}
+							{% if  i.coaAwal == '5' %}
+                 			<div class="akun-5">
+								<tr>
+									<td>	</td>
+									<td>{{i.coaAwal}}-{{i.coaAkun}}</td>
+									<td>{{i.namaAkun}}</td>
+									<td><a class="btn btn-sm btn-info" href="{%url 'updateAccount' i.id%}">Ubah</a></td>
+									<td><a class="btn btn-sm btn-danger" href="{%url 'deleteAccount' i.id%}">Hapus</a></td>
+								</tr>
+							</div>
+            			{% endif %}
+
+                        {% endfor %}
+<!--				       ======================================-->
+				{% for i in akuns %}
+							{% if  i.coaAwal == '6' %}
+                 			<div class="akun-6">
+								<tr>
+									<td>	</td>
+									<td>{{i.coaAwal}}-{{i.coaAkun}}</td>
+									<td>{{i.namaAkun}}</td>
+									<td><a class="btn btn-sm btn-info" href="{%url 'updateAccount' i.id%}">Ubah</a></td>
+									<td><a class="btn btn-sm btn-danger" href="{%url 'deleteAccount' i.id%}">Hapus</a></td>
+								</tr>
+							</div>
+            			{% endif %}
+
+                        {% endfor %}
+<!--				       ======================================-->
+				{% for i in akuns %}
+							{% if  i.coaAwal == '7' %}
+                 			<div class="akun-7">
+								<tr>
+									<td>	</td>
+									<td>{{i.coaAwal}}-{{i.coaAkun}}</td>
+									<td>{{i.namaAkun}}</td>
+									<td><a class="btn btn-sm btn-info" href="{%url 'updateAccount' i.id%}">Ubah</a></td>
+									<td><a class="btn btn-sm btn-danger" href="{%url 'deleteAccount' i.id%}">Hapus</a></td>
+								</tr>
+							</div>
+            			{% endif %}
+
+                        {% endfor %}
+<!--				       ======================================-->
+				{% for i in akuns %}
+							{% if  i.coaAwal == '8' %}
+                 			<div class="akun-8">
+								<tr>
+									<td>	</td>
+									<td>{{i.coaAwal}}-{{i.coaAkun}}</td>
+									<td>{{i.namaAkun}}</td>
+									<td><a class="btn btn-sm btn-info" href="{%url 'updateAccount' i.id%}">Ubah</a></td>
+									<td><a class="btn btn-sm btn-danger" href="{%url 'deleteAccount' i.id%}">Hapus</a></td>
+								</tr>
+							</div>
+            			{% endif %}
+
+                        {% endfor %}
+<!--				       ======================================-->
+				{% for i in akuns %}
+							{% if  i.coaAwal == '9' %}
+                 			<div class="akun-9">
+								<tr>
+									<td>	</td>
+									<td>{{i.coaAwal}}-{{i.coaAkun}}</td>
+									<td>{{i.namaAkun}}</td>
+									<td><a class="btn btn-sm btn-info" href="{%url 'updateAccount' i.id%}">Ubah</a></td>
+									<td><a class="btn btn-sm btn-danger" href="{%url 'deleteAccount' i.id%}">Hapus</a></td>
+								</tr>
+							</div>
+            			{% endif %}
+
+                        {% endfor %}
+<!--				       ======================================-->
+
+
+
+
+
+
+			</table>
+		</div>
+	</div>
+
+
+
+</div>
+
+{%endblock%}

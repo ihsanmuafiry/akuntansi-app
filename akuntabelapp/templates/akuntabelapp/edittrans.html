@@ -1,0 +1,17 @@
+{% extends 'akuntabelapp/main.html'%}
+(% load static%)
+{%block content%}
+  <h1> Edit Akun</h1>
+
+  <form id="form-edit2" method="POST">
+
+      {%csrf_token%}
+      {{form.as_p}}
+      <button type="submit">Ubah</button>
+
+
+  </form>
+
+
+
+{%endblock%}

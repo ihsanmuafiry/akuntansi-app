@@ -1,0 +1,84 @@
+{% extends 'akuntabelapp/main.html'%}
+(% load static%)
+{%block content%}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-body">
+<!--            <form id="nakunid" >-->
+<!--      			{%csrf_token%}-->
+
+<!--				<p>Atur jumlah akun: </p>-->
+<!--				<input  type="text" id="nakun" name="nakun" placeholder="Masukkan angka">-->
+
+
+<!--				<input type="submit" name="submit" value="ATUR">-->
+
+<!--			</form>-->
+<!--            <br>-->
+
+
+
+
+            <div class="row">
+                <form id="nAkunForm">
+                    {% csrf_token %}
+                     <a>Jumlah Akun: </a>
+                     <input type="text" id="nAkun"  placeholder="Masukkan angka">
+                    <input type="submit">
+                </form>
+
+            </div>
+             <br>
+
+
+
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ formset.management_form }}
+
+                    {% for form in formset%}
+
+                        {{form}}
+                        <hr>
+                    {%endfor%}
+
+
+
+                    <input name="Submit" type="submit">
+
+
+                 </form>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+        <script type="text/javascript">
+            $(document).on('submit','#nAkunForm',function(e){
+                e.preventDefault();
+
+
+
+                $.ajax({
+
+                    url:'',
+                    data:{
+                        nAkun:$('#nAkun').val(),
+
+                    },
+                    success: function (){
+
+
+                    }
+                });
+
+            });
+
+            </script>
+
+{%endblock%}

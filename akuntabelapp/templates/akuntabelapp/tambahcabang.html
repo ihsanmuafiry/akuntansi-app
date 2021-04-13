@@ -1,0 +1,27 @@
+{% extends 'akuntabelapp/main.html'%}
+(% load static%)
+{%block content%}
+
+<h1> Tambah Cabang</h1>
+
+  <form id="form-add1" method="POST">
+
+      {%csrf_token%}
+      <label > Nama Cabang</label>
+      <input type="text" name="nama"> <br>
+
+      <label > Telepon</label>
+      <input type="text" name="telepon"><br>
+
+
+
+      <input type="submit" name="submit" >
+
+
+  </form>
+
+
+
+
+
+{%endblock%}
